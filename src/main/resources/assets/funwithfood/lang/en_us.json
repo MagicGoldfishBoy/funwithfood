@@ -1,0 +1,13 @@
+{
+  "itemGroup.funwithfood": "Example Mod Tab",
+  "block.funwithfood.example_block": "Example Block",
+  "item.funwithfood.example_item": "Example Item",
+
+  "funwithfood.configuration.title": "Fun With Food Configs",
+  "funwithfood.configuration.section.funwithfood.common.toml": "Fun With Food Configs",
+  "funwithfood.configuration.section.funwithfood.common.toml.title": "Fun With Food Configs",
+  "funwithfood.configuration.items": "Item List",
+  "funwithfood.configuration.logDirtBlock": "Log Dirt Block",
+  "funwithfood.configuration.magicNumberIntroduction": "Magic Number Text",
+  "funwithfood.configuration.magicNumber": "Magic Number"
+}
