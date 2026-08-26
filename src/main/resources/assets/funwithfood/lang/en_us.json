@@ -1,7 +1,8 @@
 {
-  "itemGroup.funwithfood": "Example Mod Tab",
+  "itemGroup.funwithfood": "Fun With Food",
   "block.funwithfood.example_block": "Example Block",
   "item.funwithfood.example_item": "Example Item",
+  "block.funwithfood.grinder": "Grinder",
 
   "funwithfood.configuration.title": "Fun With Food Configs",
   "funwithfood.configuration.section.funwithfood.common.toml": "Fun With Food Configs",
