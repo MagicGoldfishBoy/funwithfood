@@ -30,6 +30,7 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 public class GrinderEntity extends BlockEntity implements MenuProvider {
 
     public GrinderEntity(BlockPos pos, BlockState blockState) {
+        
         super(Tools.GRINDER_ENTITY.get(), pos, blockState);
         data = new ContainerData() {
             @Override

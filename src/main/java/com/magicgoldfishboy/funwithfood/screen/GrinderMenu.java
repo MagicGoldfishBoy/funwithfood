@@ -44,9 +44,9 @@ public class GrinderMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new SlotItemHandler(grinderEntity.inventory, 0, 54, 34));
-        this.addSlot(new SlotItemHandler(grinderEntity.inventory, 1, 184, 34));
-        this.addSlot(new SlotItemHandler(grinderEntity.inventory, 2, 84, 134));
+        this.addSlot(new SlotItemHandler(grinderEntity.inventory, 0, 54, 21));
+        this.addSlot(new SlotItemHandler(grinderEntity.inventory, 1, 100, 21));
+        this.addSlot(new SlotItemHandler(grinderEntity.inventory, 2, 77, 45));
 
         addDataSlots(data);
     }
