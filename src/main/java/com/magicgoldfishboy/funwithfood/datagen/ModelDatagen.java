@@ -3,6 +3,7 @@ package com.magicgoldfishboy.funwithfood.datagen;
 import javax.annotation.Nonnull;
 
 import com.magicgoldfishboy.funwithfood.FunWithFood;
+import com.magicgoldfishboy.funwithfood.Mush;
 import com.magicgoldfishboy.funwithfood.Tools;
 import com.magicgoldfishboy.funwithfood.block.Grinder;
 
@@ -22,7 +23,12 @@ public class ModelDatagen extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        registerMushModels();
         registerBlockbenchModels();
+    }
+
+    protected void registerMushModels() {
+        itemModels().basicItem(Mush.APPLE_MUSH.get());
     }
 
     protected void registerBlockbenchModels() {
