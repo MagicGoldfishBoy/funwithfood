@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "lit=false": {
       "model": "funwithfood:block/grinder"
+    },
+    "lit=true": {
+      "model": "funwithfood:block/grinder_lit"
     }
   }
 }
