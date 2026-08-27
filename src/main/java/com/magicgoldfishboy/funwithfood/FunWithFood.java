@@ -3,6 +3,7 @@ package com.magicgoldfishboy.funwithfood;
 import org.slf4j.Logger;
 
 import com.magicgoldfishboy.funwithfood.datagen.Datagen;
+import com.magicgoldfishboy.funwithfood.screen.GrinderScreen;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -26,6 +27,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -88,6 +90,7 @@ public class FunWithFood {
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
         modEventBus.addListener(this::gatherData);
+        modEventBus.addListener(this::registerScreens);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -106,5 +109,10 @@ public class FunWithFood {
     public void gatherData(GatherDataEvent event) {
         Datagen datagen = new Datagen();
         datagen.gatherData(event);
+    }
+
+    //@SubscribeEvent
+    public void registerScreens(RegisterMenuScreensEvent event) {
+        event.register(Tools.GRINDER_MENU.get(), GrinderScreen::new);
     }
 }

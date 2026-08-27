@@ -4,6 +4,7 @@ import javax.annotation.Nullable;
 
 import com.magicgoldfishboy.funwithfood.Mush;
 import com.magicgoldfishboy.funwithfood.Tools;
+import com.magicgoldfishboy.funwithfood.screen.GrinderMenu;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
@@ -103,9 +104,8 @@ public class GrinderEntity extends BlockEntity implements MenuProvider {
 
     @Override
     @Nullable
-    public AbstractContainerMenu createMenu(int arg0, Inventory arg1, Player arg2) {
-        // TODO: Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'createMenu'");
+    public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
+        return new GrinderMenu(i, inventory, this, this.data);
     }
 
     @Override
