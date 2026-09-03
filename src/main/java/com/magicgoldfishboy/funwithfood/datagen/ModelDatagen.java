@@ -6,6 +6,7 @@ import com.magicgoldfishboy.funwithfood.FunWithFood;
 import com.magicgoldfishboy.funwithfood.Ingots;
 import com.magicgoldfishboy.funwithfood.Mush;
 import com.magicgoldfishboy.funwithfood.Nuggets;
+import com.magicgoldfishboy.funwithfood.SimpleBlocks;
 import com.magicgoldfishboy.funwithfood.Tools;
 import com.magicgoldfishboy.funwithfood.block.Grinder;
 
@@ -28,6 +29,7 @@ public class ModelDatagen extends BlockStateProvider {
         registerMushModels();
         registerIngotModels();
         registerNuggetModels();
+        registerSimpleBlockModels();
         registerBlockbenchModels();
     }
 
@@ -44,6 +46,11 @@ public class ModelDatagen extends BlockStateProvider {
     @SuppressWarnings("null")
     protected void registerNuggetModels() {
         itemModels().basicItem(Nuggets.APPLE_NUGGET.get());
+    }
+
+    @SuppressWarnings("null")
+    protected void registerSimpleBlockModels() {
+        simpleBlockWithItem(SimpleBlocks.APPLE_BLOCK.get(), cubeAll(SimpleBlocks.APPLE_BLOCK.get()));
     }
 
     @SuppressWarnings("null")

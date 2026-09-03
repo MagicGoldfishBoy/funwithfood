@@ -4,6 +4,7 @@
   "item.funwithfood.apple_mush": "Apple Mush",
   "item.funwithfood.apple_ingot": "Apple Ingot",
   "item.funwithfood.apple_nugget": "Apple Nugget",
+  "block.funwithfood.apple_block": "Apple Block",
 
   "funwithfood.configuration.title": "Fun With Food Configs",
   "funwithfood.configuration.section.funwithfood.common.toml": "Fun With Food Configs",

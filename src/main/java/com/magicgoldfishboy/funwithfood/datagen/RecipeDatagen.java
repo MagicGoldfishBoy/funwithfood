@@ -5,6 +5,7 @@ import java.util.concurrent.CompletableFuture;
 import com.magicgoldfishboy.funwithfood.Ingots;
 import com.magicgoldfishboy.funwithfood.Mush;
 import com.magicgoldfishboy.funwithfood.Nuggets;
+import com.magicgoldfishboy.funwithfood.SimpleBlocks;
 import com.magicgoldfishboy.funwithfood.Tools;
 
 import net.minecraft.core.HolderLookup.Provider;
@@ -39,6 +40,7 @@ public class RecipeDatagen extends RecipeProvider {
 
         buildIngotRecipes(output);
         buildNuggetRecipes(output);
+        buildSimpleBlockRecipes(output);
 
     }
 
@@ -72,5 +74,23 @@ public class RecipeDatagen extends RecipeProvider {
             .define('#', Ingots.APPLE_INGOT.get())
             .unlockedBy("has_apple_ingot", has(Ingots.APPLE_INGOT.get()))
             .save(output, "apple_nugget_from_crafting");
+    }
+
+    @SuppressWarnings("null")
+    protected void buildSimpleBlockRecipes(RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SimpleBlocks.APPLE_BLOCK.get())
+            .pattern("###")
+            .pattern("###")
+            .pattern("###")
+            .define('#', Ingots.APPLE_INGOT.get())
+            .unlockedBy("has_apple_ingot", has(Ingots.APPLE_INGOT.get()))
+            .save(output, "apple_block_from_crafting");
+        // ShapedRecipeBuilder.shaped(RecipeCategory.MISC, SimpleBlocks.APPLE_BLOCK.get())
+        //     .pattern("###")
+        //     .pattern("###")
+        //     .pattern("###")
+        //     .define('#', Ingots.APPLE_INGOT.get())
+        //     .unlockedBy("has_apple_ingot", has(Ingots.APPLE_INGOT.get()))
+        //     .save(output, "apple_block_from_crafting");
     }
 }
