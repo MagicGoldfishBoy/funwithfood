@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "$": {
+      "item": "minecraft:redstone"
+    },
+    "%": {
+      "item": "minecraft:shears"
+    }
+  },
+  "pattern": [
+    "$#$",
+    "#%#",
+    "$#$"
+  ],
+  "result": {
+    "count": 1,
+    "id": "funwithfood:grinder"
+  }
+}

@@ -4,6 +4,7 @@ import javax.annotation.Nullable;
 
 import com.magicgoldfishboy.funwithfood.Mush;
 import com.magicgoldfishboy.funwithfood.Tools;
+import com.magicgoldfishboy.funwithfood.block.Grinder;
 import com.magicgoldfishboy.funwithfood.screen.GrinderMenu;
 
 import net.minecraft.core.BlockPos;
@@ -145,6 +146,8 @@ public class GrinderEntity extends BlockEntity implements MenuProvider {
         inventory.extractItem(INPUT_SLOT, 1, false);
         inventory.setStackInSlot(OUTPUT_SLOT, new ItemStack(output.getItem(),
         inventory.getStackInSlot(OUTPUT_SLOT).getCount() + output.getCount()));
+
+       // Grinder.LIT.value(true);
     }
 
     private void resetProgress() {

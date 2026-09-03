@@ -79,8 +79,9 @@ public class FunWithFood {
         CREATIVE_MODE_TABS.register(modEventBus);
 
         Tools.registerAll();
-
         Mush.registerAll();
+        Ingots.registerAll();
+        Nuggets.registerAll();
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (FunWithFood) to respond directly to events.

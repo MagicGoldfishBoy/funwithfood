@@ -3,7 +3,9 @@ package com.magicgoldfishboy.funwithfood.datagen;
 import javax.annotation.Nonnull;
 
 import com.magicgoldfishboy.funwithfood.FunWithFood;
+import com.magicgoldfishboy.funwithfood.Ingots;
 import com.magicgoldfishboy.funwithfood.Mush;
+import com.magicgoldfishboy.funwithfood.Nuggets;
 import com.magicgoldfishboy.funwithfood.Tools;
 import com.magicgoldfishboy.funwithfood.block.Grinder;
 
@@ -24,13 +26,27 @@ public class ModelDatagen extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         registerMushModels();
+        registerIngotModels();
+        registerNuggetModels();
         registerBlockbenchModels();
     }
 
+    @SuppressWarnings("null")
     protected void registerMushModels() {
         itemModels().basicItem(Mush.APPLE_MUSH.get());
     }
 
+    @SuppressWarnings("null")
+    protected void registerIngotModels() {
+        itemModels().basicItem(Ingots.APPLE_INGOT.get());
+    }
+
+    @SuppressWarnings("null")
+    protected void registerNuggetModels() {
+        itemModels().basicItem(Nuggets.APPLE_NUGGET.get());
+    }
+
+    @SuppressWarnings("null")
     protected void registerBlockbenchModels() {
 
         Grinder grinder = Tools.GRINDER.get();
